@@ -1,8 +1,8 @@
-// script.js
-// Add event listeners to navigation links
-document.querySelectorAll('nav a').forEach((link) => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        // Add logic to handle navigation clicks
-    });
-});
+let p = fetch("https://goweather.herokuapp.com/weather/ND")
+p.then((value1) => {
+    console.log(value1.status)
+    console.log(value1.ok)
+    return value1.json()
+}).then((value2) => {
+    console.log(value2)
+})
