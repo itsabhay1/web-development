@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayHitesh = function(){
+        console.log("Hitesh");
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "best JS series"
+    }
+
+    const changeMe = setTimeout(changeText, 2000)  // SETTIMEOUT IS USED TO DO A EVENT AFTER A CERTAIN PERIOD OF TIME WHICH WHEN CALL FROM STACK IT PASSES THROUGH WEBAPI OR ANY OTHER API LIKE NODE API AND THEN QUERY QUEUE AND THEN BACK TO STACK
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)  // CLEARTIMEOUT IS USED TO STOP THE SETTIMEOUT // HERE WE PUT A EVENT LISTNER WHICH WHEN CLICKED CLEARTIME OUT IS RUN TO STOP THE SETTIMEOUT
+        console.log("STOPPED")     
+    })
+</script>
+</html>
